@@ -1,0 +1,75 @@
+//package NewTest;
+//
+//import java.util.concurrent.TimeUnit;
+//
+//import org.openqa.selenium.WebDriver;
+//import org.openqa.selenium.firefox.FirefoxDriver;
+//import org.testng.annotations.AfterMethod;
+//import org.testng.annotations.BeforeMethod;
+//import org.testng.annotations.Test;
+//
+//public class NewTest {
+//	private WebDriver driver;
+//
+//	@Test
+//	public void main() throws InterruptedException {
+//		driver.get("http://yandex.ru");
+//		Thread.sleep(4000);
+//	}
+//
+//	@BeforeMethod
+//	public void beforeMethod() {
+//		System.setProperty("webdriver.gecko.driver", "/Users/iliashebanov/Dropbox/JAVA/drivers/geckodriver");
+//		driver = new FirefoxDriver();
+//		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+//	}
+//
+//	@AfterMethod
+//	public void afterMethod() {
+//		driver.quit();
+//	}
+//
+//}
+package NewTest;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+public class NewTest {
+	public WebDriver driver;
+
+	@Test
+	public void main() throws InterruptedException {
+
+		driver.get("http://www.mail.ru/");
+		driver.findElement(By.id("mailbox__login")).clear();
+		driver.findElement(By.id("mailbox__login")).sendKeys("klacuk070");
+		driver.findElement(By.id("mailbox__password")).clear();
+	    driver.findElement(By.id("mailbox__password")).sendKeys("Sxsblpwiwnbbhlyucrk3");
+	    driver.findElement(By.id("mailbox__auth__button")).click();
+	    driver.findElement(By.xpath("//div[@id='b-letters']/div/div[2]/div/div[2]/div[4]/div/a/div[4]/div[3]/div[2]")).click();
+		Thread.sleep(4000);
+	}
+
+	@BeforeMethod
+	public void beforeMethod() {
+		// System.setProperty("webdriver.gecko.driver",
+		// "/usr/local/Cellar/geckodriver/0.16.0/bin/geckodriver");
+		System.setProperty("webdriver.gecko.driver", "/usr/local/Cellar/geckodriver/0.16.0/bin/geckodriver");
+
+		driver = new FirefoxDriver();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	}
+
+	@AfterMethod
+	public void afterMethod() {
+		driver.quit();
+	}
+
+}

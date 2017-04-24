@@ -1,0 +1,83 @@
+//package NewTest;
+//
+//import java.util.concurrent.TimeUnit;
+//
+//import org.openqa.selenium.WebDriver;
+//import org.openqa.selenium.firefox.FirefoxDriver;
+//import org.testng.annotations.AfterMethod;
+//import org.testng.annotations.BeforeMethod;
+//import org.testng.annotations.Test;
+//
+//public class NewTest {
+//	private WebDriver driver;
+//
+//	@Test
+//	public void main() throws InterruptedException {
+//		driver.get("http://yandex.ru");
+//		Thread.sleep(4000);
+//	}
+//
+//	@BeforeMethod
+//	public void beforeMethod() {
+//		System.setProperty("webdriver.gecko.driver", "/Users/iliashebanov/Dropbox/JAVA/drivers/geckodriver");
+//		driver = new FirefoxDriver();
+//		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+//	}
+//
+//	@AfterMethod
+//	public void afterMethod() {
+//		driver.quit();
+//	}
+//
+//}
+package NewTest;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+public class NewTest {
+	public WebDriver driver;
+
+	@Test
+	public void main() throws InterruptedException {
+		String userlogin = "klacuk070";
+		String usrePassword = "Sxsblpwiwnbbhlyucrk3";
+		driver.get("http://www.mail.ru/");
+		driver.findElement(By.id("mailbox__login")).clear();
+		driver.findElement(By.id("mailbox__login")).sendKeys(userlogin);
+		driver.findElement(By.id("mailbox__password")).clear();
+		driver.findElement(By.id("mailbox__password")).sendKeys(usrePassword);
+		driver.findElement(By.id("mailbox__auth__button")).click();
+		Thread.sleep(6000);
+		String checkIn = driver.findElement(By.xpath("//tr/td[1]/div/div/div/span/i[3]")).getText();
+		Assert.assertEquals(checkIn, userlogin + "@mail.ru");
+		System.out.println(checkIn);
+		Thread.sleep(10000);
+	}
+
+
+	@BeforeMethod
+	public void beforeMethod() {
+		// System.setProperty("webdriver.gecko.driver",
+		// "/usr/local/Cellar/geckodriver/0.16.0/bin/geckodriver");
+		System.setProperty("webdriver.gecko.driver", "/usr/local/Cellar/geckodriver/0.16.0/bin/geckodriver");
+
+		driver = new FirefoxDriver();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+	}
+
+	@AfterMethod
+	public void afterMethod() {
+		driver.quit();
+	}
+
+}

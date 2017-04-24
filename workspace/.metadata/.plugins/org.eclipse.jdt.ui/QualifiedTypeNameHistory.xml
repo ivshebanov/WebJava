@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="testSpring.interfaces.Robot"/>
+<fullyQualifiedTypeName name="testSpring.interfaces.Hand"/>
+<fullyQualifiedTypeName name="testSpring.interfaces.Leg"/>
+<fullyQualifiedTypeName name="testSpring.interfaces.Head"/>
+<fullyQualifiedTypeName name="org.springframework.context.ApplicationContext"/>
+<fullyQualifiedTypeName name="org.springframework.context.support.ClassPathXmlApplicationContext"/>
+<fullyQualifiedTypeName name="testSpring.impl.robot.Model501"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.chrome.ChromeDriver"/>
+<fullyQualifiedTypeName name="java.util.concurrent.TimeUnit"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.firefox.FirefoxDriver"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.WebDriver"/>
+</qualifiedTypeNameHistroy>

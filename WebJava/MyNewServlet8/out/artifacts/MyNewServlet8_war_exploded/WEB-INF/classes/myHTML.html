@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--
+  ~ Copyright (c) 2017. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  ~ Morbi non lorem porttitor neque feugiat blandit. Ut vitae ipsum eget quam lacinia accumsan.
+  ~ Etiam sed turpis ac ipsum condimentum fringilla. Maecenas magna.
+  ~ Proin dapibus sapien vel ante. Aliquam erat volutpat. Pellentesque sagittis ligula eget metus.
+  ~ Vestibulum commodo. Ut rhoncus gravida arcu.
+  -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form>
+    <p>Введите ваше имя:</p>
+    <input type="text"/>
+    <p>Введите пароль: </p>
+    <input type="password"/>
+</form>
+
+<form>
+    <p> Введите ФИО в поля ниже: </p> <br/>
+    Имя: <input type="text" name="firstname"/><br/>
+    Фамилия: <input type="text" name="lastname"/><br/>
+    Отчество: <input type="text" name="lastname"/>
+</form>
+
+<form>
+    <p> Как вы относитесь к полетам в космос? </p>
+    <input type="checkbox" name="space" value="1"/>
+    Положительно, всегда хотел полететь в космос<br/>
+    <input type="checkbox" name="space" value="2"/>
+    Безразлично, никогда не думал об этом серьезно <br/>
+    <input type="checkbox" name="space" value="3"/>
+    Отрицательно, меня с детства отталкивают мысли о космосе <br/>
+</form>
+
+
+<form>
+    <p> Укажите Ваш пол: </p>
+    <input type="radio" name="s" value="m"/> Мужской<br/>
+    <input type="radio" name="s" value="f"/> Женский
+</form>
+
+<p> Выберите ваш пол </p>
+<form>
+    <select name="sex" >
+        <option value="m"> Мужской </option>
+        <option value="f"> Женский </option>
+    </select>
+</form>
+
+<p>В данном списке может быть одновременно выбрано несколько значений (для этого зажмите клавишу Ctrl и щелкайте на необходимые элементы): </p>
+<form>
+    <select name='city' multiple='multiple'>
+        <option value='london'>Лондон</option>
+        <option value='moscow'>Москва</option>
+        <option value='newyork'>Нью Йорк</option>
+    </select>
+</form>
+
+</body>
+</html>

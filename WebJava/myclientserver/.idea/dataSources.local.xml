@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="PostgreSQL - myclientserver@127.0.0.1" uuid="9d8db125-a0e8-4eae-8e26-1b290db734a2">
+      <database-info product="PostgreSQL" version="9.6.2" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>postgres</user-name>
+      <resolve-scope>myclientserver:public,postgres</resolve-scope>
+    </data-source>
+  </component>
+</project>

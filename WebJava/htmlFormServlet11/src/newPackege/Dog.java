@@ -1,0 +1,22 @@
+/*
+ * Copyright (c) 2017. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ * Morbi non lorem porttitor neque feugiat blandit. Ut vitae ipsum eget quam lacinia accumsan.
+ * Etiam sed turpis ac ipsum condimentum fringilla. Maecenas magna.
+ * Proin dapibus sapien vel ante. Aliquam erat volutpat. Pellentesque sagittis ligula eget metus.
+ * Vestibulum commodo. Ut rhoncus gravida arcu.
+ */
+
+package newPackege;
+
+/**
+ * Created by iliashebanov on 25.03.17.
+ */
+public class Dog {
+    public static String color = "Черный";
+    public static int size = 10;
+    public static int weight = 15;
+
+    public static String gav(){
+        return "гав-гав-гав!";
+    }
+}
