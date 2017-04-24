@@ -45,27 +45,27 @@ public class test_02 {
         driver.findElement(By.id("mailbox__password")).clear();
         driver.findElement(By.id("mailbox__password")).sendKeys(usrePassword);
         // ждём появления кнопки на "недозагруженной" странице
-//        driver.findElement(By.id("mailbox__auth__button")).click();
+        driver.findElement(By.id("mailbox__auth__button")).click();
 
 
-        WebElement button = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("mailbox__auth__button")));
-        try {
-            button.click();// кликаем
-        } catch (TimeoutException ignore) {
-        }
-        wait.until(ExpectedConditions.stalenessOf(driver.findElement(By.id("mailbox__auth__button"))));// ждём исчезновения
-//        // кнопки, то есть
-//        // "выгрузки"
-//        // страницы
-        WebElement button1 = wait
-                .until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//tr/td[1]/div/div/div/span/i[3]")));
-        try {
-            String checkIn = button1.getText();
-            Assert.assertEquals(checkIn, userlogin);
-            System.out.println(checkIn);
-        } catch (TimeoutException ignore) {
-            System.out.println("Ошибка загрузки почты");
-        }
+//        WebElement button = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("mailbox__auth__button")));
+//        try {
+//            button.click();// кликаем
+//        } catch (TimeoutException ignore) {
+//        }
+//        wait.until(ExpectedConditions.stalenessOf(driver.findElement(By.id("mailbox__auth__button"))));// ждём исчезновения
+////        // кнопки, то есть
+////        // "выгрузки"
+////        // страницы
+//        WebElement button1 = wait
+//                .until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//tr/td[1]/div/div/div/span/i[3]")));
+//        try {
+//            String checkIn = button1.getText();
+//            Assert.assertEquals(checkIn, userlogin);
+//            System.out.println(checkIn);
+//        } catch (TimeoutException ignore) {
+//            System.out.println("Ошибка загрузки почты");
+//        }
         Thread.sleep(7000);
     }
 
