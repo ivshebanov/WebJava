@@ -1,14 +1,11 @@
 eclipse.preferences.version=1
-org.eclipse.jdt.core.classpathVariable.ASPECTJRT_LIB=/Applications/Eclipse.app/Contents/Eclipse/plugins/org.aspectj.runtime_1.8.10.201703272045.jar
-org.eclipse.jdt.core.classpathVariable.ECLIPSE_HOME=/Applications/Eclipse.app/Contents/Eclipse/
-org.eclipse.jdt.core.classpathVariable.FINDBUGS_ANNOTATIONS=/Applications/Eclipse.app/Contents/Eclipse/plugins/edu.umd.cs.findbugs.plugin.eclipse_3.0.2.20160306-90c514b/lib/annotations.jar
+org.eclipse.jdt.core.classpathVariable.ECLIPSE_HOME=/Users/iliashebanov/Applications/eclipse/jee-neon/Eclipse.app/Contents/Eclipse/
 org.eclipse.jdt.core.classpathVariable.JRE_LIB=/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/jre/lib/rt.jar
 org.eclipse.jdt.core.classpathVariable.JRE_SRC=/Library/Java/JavaVirtualMachines/jdk1.8.0_101.jdk/Contents/Home/src.zip
 org.eclipse.jdt.core.classpathVariable.JRE_SRCROOT=src
-org.eclipse.jdt.core.classpathVariable.JSR305_ANNOTATIONS=/Applications/Eclipse.app/Contents/Eclipse/plugins/edu.umd.cs.findbugs.plugin.eclipse_3.0.2.20160306-90c514b/lib/jsr305.jar
-org.eclipse.jdt.core.classpathVariable.JUNIT_HOME=/Applications/Eclipse.app/Contents/Eclipse/plugins/org.junit_4.12.0.v201504281640/
+org.eclipse.jdt.core.classpathVariable.JUNIT_HOME=/Users/iliashebanov/.p2/pool/plugins/org.junit_4.12.0.v201504281640
 org.eclipse.jdt.core.classpathVariable.M2_REPO=/Users/iliashebanov/.m2/repository
-org.eclipse.jdt.core.classpathVariable.TESTNG_HOME=/Applications/Eclipse.app/Contents/Eclipse/plugins/org.testng.eclipse_6.11.0.201703011520
+org.eclipse.jdt.core.classpathVariable.TESTNG_HOME=/Users/iliashebanov/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520
 org.eclipse.jdt.core.codeComplete.visibilityCheck=enabled
 org.eclipse.jdt.core.compiler.codegen.inlineJsrBytecode=enabled
 org.eclipse.jdt.core.compiler.codegen.targetPlatform=1.8
