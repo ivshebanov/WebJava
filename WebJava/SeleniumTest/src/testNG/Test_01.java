@@ -31,12 +31,12 @@ public class Test_01 {
         driver.findElement(By.id("mailbox__login")).sendKeys(userlogin);
         driver.findElement(By.id("mailbox__password")).clear();
         driver.findElement(By.id("mailbox__password")).sendKeys(usrePassword);
-        Thread.sleep(5000);
-//        WebElement button = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("mailbox__auth__button")));
-//        try {
-//            button.click();
-//        } catch (TimeoutException ignore) {
-//        }
+        Thread.sleep(3000);
+        WebElement button = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("mailbox__auth__button")));
+        try {
+            button.click();
+        } catch (TimeoutException ignore) {
+        }
 //        wait.until(ExpectedConditions.stalenessOf(button));
 //        String checkIn = wait
 //                .until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//tr/td[1]/div/div/div/span/i[3]"))).getText();

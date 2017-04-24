@@ -44,27 +44,26 @@ public class test_01 {
         // ждём появления кнопки на "недозагруженной" странице
         driver.findElement(By.id("mailbox__auth__button")).click();
 
+
 //        WebElement button = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("mailbox__auth__button")));
 //        try {
 //            button.click();// кликаем
 //        } catch (TimeoutException ignore) {
 //        }
-//        wait.until(ExpectedConditions.stalenessOf(button));// ждём исчезновения
+//        wait.until(ExpectedConditions.stalenessOf(driver.findElement(By.id("mailbox__auth__button"))));// ждём исчезновения
 //        // кнопки, то есть
 //        // "выгрузки"
 //        // страницы
-//        // driver.findElement(By.id("mailbox__auth__button")).click();
-//
-//        WebElement button1 = wait
-//                .until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//tr/td[1]/div/div/div/span/i[3]")));
-//        try {
-//            String checkIn = button1.getText();
-//            Assert.assertEquals(checkIn, userlogin);
-//            System.out.println(checkIn);
-//        } catch (TimeoutException ignore) {
-//            System.out.println("Ошибка загрузки почты");
-//        }
-        Thread.sleep(5000);
+        WebElement button1 = wait
+                .until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//tr/td[1]/div/div/div/span/i[3]")));
+        try {
+            String checkIn = button1.getText();
+            Assert.assertEquals(checkIn, userlogin);
+            System.out.println(checkIn);
+        } catch (TimeoutException ignore) {
+            System.out.println("Ошибка загрузки почты");
+        }
+        Thread.sleep(7000);
     }
 
 
