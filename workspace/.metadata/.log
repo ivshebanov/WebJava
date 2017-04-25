@@ -1494,3 +1494,31 @@ java -ea -classpath /Users/iliashebanov/.p2/pool/plugins/org.testng.eclipse_6.11
   Class:     org.testng.remote.RemoteTestNG
   Args:      -serport 61091 -protocol json -d /Users/iliashebanov/Documents/WebJava/workspace/testi_Sele_testNG/test-output /var/folders/87/zdblb6_n7kn6s977jzw3xsv40000gn/T/testng-eclipse-384054355/testng-customsuite.xml
 java -ea -classpath /Users/iliashebanov/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/testng-remote.jar:/Users/iliashebanov/Documents/WebJava/workspace/testi_Sele_testNG/bin:/Users/iliashebanov/Documents/WebJava/drivers/selenium-server-standalone-3.4.0.jar:/Users/iliashebanov/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/testng.jar:/Users/iliashebanov/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/jcommander.jar:/Users/iliashebanov/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/bsh-2.0b4.jar:/Users/iliashebanov/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/snakeyaml.jar org.testng.remote.RemoteTestNG -serport 61091 -protocol json -d /Users/iliashebanov/Documents/WebJava/workspace/testi_Sele_testNG/test-output /var/folders/87/zdblb6_n7kn6s977jzw3xsv40000gn/T/testng-eclipse-384054355/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-04-25 21:34:40.633
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /Users/iliashebanov/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/testng-remote.jar /Users/iliashebanov/Documents/WebJava/workspace/testi_Sele_testNG/bin /Users/iliashebanov/Documents/WebJava/drivers/selenium-server-standalone-3.4.0.jar /Users/iliashebanov/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/testng.jar /Users/iliashebanov/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/jcommander.jar /Users/iliashebanov/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/bsh-2.0b4.jar /Users/iliashebanov/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/snakeyaml.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 62938 -protocol json -d /Users/iliashebanov/Documents/WebJava/workspace/testi_Sele_testNG/test-output /var/folders/87/zdblb6_n7kn6s977jzw3xsv40000gn/T/testng-eclipse--1498041507/testng-customsuite.xml
+java -ea -classpath /Users/iliashebanov/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/testng-remote.jar:/Users/iliashebanov/Documents/WebJava/workspace/testi_Sele_testNG/bin:/Users/iliashebanov/Documents/WebJava/drivers/selenium-server-standalone-3.4.0.jar:/Users/iliashebanov/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/testng.jar:/Users/iliashebanov/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/jcommander.jar:/Users/iliashebanov/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/bsh-2.0b4.jar:/Users/iliashebanov/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/snakeyaml.jar org.testng.remote.RemoteTestNG -serport 62938 -protocol json -d /Users/iliashebanov/Documents/WebJava/workspace/testi_Sele_testNG/test-output /var/folders/87/zdblb6_n7kn6s977jzw3xsv40000gn/T/testng-eclipse--1498041507/testng-customsuite.xml
+!SESSION 2017-04-25 21:48:24.055 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_101
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=ru_RU
+Framework arguments:  -product org.eclipse.epp.package.jee.product -keyring /Users/iliashebanov/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.jee.product -keyring /Users/iliashebanov/.eclipse_keyring
+
+!ENTRY org.eclipse.ui 2 0 2017-04-25 21:48:31.333
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-04-25 21:48:31.333
+!MESSAGE Commands should really have a category: plug-in='net.sf.eclipsecs.ui', id='CheckstylePlugin.PurgeCaches', categoryId='net.sf.eclipsecs'
+
+!ENTRY org.eclipse.ui 2 0 2017-04-25 21:48:32.183
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2017-04-25 21:48:32.183
+!MESSAGE Commands should really have a category: plug-in='net.sf.eclipsecs.ui', id='CheckstylePlugin.PurgeCaches', categoryId='net.sf.eclipsecs'
+
+!ENTRY org.eclipse.core.net 1 0 2017-04-25 21:48:34.141
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences

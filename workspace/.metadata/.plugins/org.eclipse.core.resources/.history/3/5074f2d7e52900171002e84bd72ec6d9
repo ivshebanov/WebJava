@@ -36,6 +36,7 @@ public class testi_Sele_testNG {
 															// кнопки, то есть
 															// "выгрузки"
 															// страницы
+		// driver.findElement(By.id("mailbox__auth__button")).click();
 		WebElement button1 = wait
 				.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//tr/td[1]/div/div/div/span/i[3]")));		
 		String checkIn = button1.getText();
