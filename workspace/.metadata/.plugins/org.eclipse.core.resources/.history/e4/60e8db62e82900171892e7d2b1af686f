@@ -23,6 +23,7 @@ public class testi_Sele_testNG {
 	public void main() throws InterruptedException {
 		String userlogin = "klacuk070@mail.ru";
 		String usrePassword = "Sxsblpwiwnbbhlyucrk3";
+
 		driver.get("http://www.mail.ru");
 		driver.findElement(By.id("mailbox__login")).clear();
 		driver.findElement(By.id("mailbox__login")).sendKeys(userlogin);
@@ -58,9 +59,9 @@ public class testi_Sele_testNG {
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		capabilities.setCapability(CapabilityType.PAGE_LOAD_STRATEGY, "eager");
 		driver = new ChromeDriver();
-		wait = new WebDriverWait(driver, 15);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
+		wait = new WebDriverWait(driver, 15);
 	}
 
 	@AfterMethod

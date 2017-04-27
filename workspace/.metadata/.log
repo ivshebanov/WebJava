@@ -1522,3 +1522,33 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.
 
 !ENTRY org.eclipse.core.net 1 0 2017-04-25 21:48:34.141
 !MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.jface.text 2 0 2017-04-25 21:49:19.472
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-04-25 21:49:19.479
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.testng.eclipse 1 0 2017-04-25 21:49:41.487
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /Users/iliashebanov/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/testng-remote.jar /Users/iliashebanov/Documents/WebJava/workspace/testi_Sele_testNG/bin /Users/iliashebanov/Documents/WebJava/drivers/selenium-server-standalone-3.4.0.jar /Users/iliashebanov/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/testng.jar /Users/iliashebanov/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/jcommander.jar /Users/iliashebanov/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/bsh-2.0b4.jar /Users/iliashebanov/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/snakeyaml.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 64288 -protocol json -d /Users/iliashebanov/Documents/WebJava/workspace/testi_Sele_testNG/test-output /var/folders/87/zdblb6_n7kn6s977jzw3xsv40000gn/T/testng-eclipse-1911904273/testng-customsuite.xml
+java -ea -classpath /Users/iliashebanov/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/testng-remote.jar:/Users/iliashebanov/Documents/WebJava/workspace/testi_Sele_testNG/bin:/Users/iliashebanov/Documents/WebJava/drivers/selenium-server-standalone-3.4.0.jar:/Users/iliashebanov/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/testng.jar:/Users/iliashebanov/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/jcommander.jar:/Users/iliashebanov/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/bsh-2.0b4.jar:/Users/iliashebanov/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/snakeyaml.jar org.testng.remote.RemoteTestNG -serport 64288 -protocol json -d /Users/iliashebanov/Documents/WebJava/workspace/testi_Sele_testNG/test-output /var/folders/87/zdblb6_n7kn6s977jzw3xsv40000gn/T/testng-eclipse-1911904273/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-04-25 21:52:52.678
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /Users/iliashebanov/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/testng-remote.jar /Users/iliashebanov/Documents/WebJava/workspace/testi_Sele_testNG/bin /Users/iliashebanov/Documents/WebJava/drivers/selenium-server-standalone-3.4.0.jar /Users/iliashebanov/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/testng.jar /Users/iliashebanov/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/jcommander.jar /Users/iliashebanov/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/bsh-2.0b4.jar /Users/iliashebanov/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/snakeyaml.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 64719 -protocol json -d /Users/iliashebanov/Documents/WebJava/workspace/testi_Sele_testNG/test-output /var/folders/87/zdblb6_n7kn6s977jzw3xsv40000gn/T/testng-eclipse--879004597/testng-customsuite.xml
+java -ea -classpath /Users/iliashebanov/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/testng-remote.jar:/Users/iliashebanov/Documents/WebJava/workspace/testi_Sele_testNG/bin:/Users/iliashebanov/Documents/WebJava/drivers/selenium-server-standalone-3.4.0.jar:/Users/iliashebanov/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/testng.jar:/Users/iliashebanov/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/jcommander.jar:/Users/iliashebanov/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/bsh-2.0b4.jar:/Users/iliashebanov/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/snakeyaml.jar org.testng.remote.RemoteTestNG -serport 64719 -protocol json -d /Users/iliashebanov/Documents/WebJava/workspace/testi_Sele_testNG/test-output /var/folders/87/zdblb6_n7kn6s977jzw3xsv40000gn/T/testng-eclipse--879004597/testng-customsuite.xml
+
+!ENTRY org.testng.eclipse 1 0 2017-04-25 21:53:47.342
+!MESSAGE [TestNGLaunchConfigurationDelegate] Launching:
+  Classpath: /Users/iliashebanov/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/testng-remote.jar /Users/iliashebanov/Documents/WebJava/workspace/testi_Sele_testNG/bin /Users/iliashebanov/Documents/WebJava/drivers/selenium-server-standalone-3.4.0.jar /Users/iliashebanov/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/testng.jar /Users/iliashebanov/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/jcommander.jar /Users/iliashebanov/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/bsh-2.0b4.jar /Users/iliashebanov/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/snakeyaml.jar
+  VMArgs:    -ea
+  Class:     org.testng.remote.RemoteTestNG
+  Args:      -serport 64880 -protocol json -d /Users/iliashebanov/Documents/WebJava/workspace/testi_Sele_testNG/test-output /var/folders/87/zdblb6_n7kn6s977jzw3xsv40000gn/T/testng-eclipse-1901468435/testng-customsuite.xml
+java -ea -classpath /Users/iliashebanov/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/testng-remote.jar:/Users/iliashebanov/Documents/WebJava/workspace/testi_Sele_testNG/bin:/Users/iliashebanov/Documents/WebJava/drivers/selenium-server-standalone-3.4.0.jar:/Users/iliashebanov/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/testng.jar:/Users/iliashebanov/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/jcommander.jar:/Users/iliashebanov/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/bsh-2.0b4.jar:/Users/iliashebanov/.p2/pool/plugins/org.testng.eclipse_6.11.0.201703011520/lib/snakeyaml.jar org.testng.remote.RemoteTestNG -serport 64880 -protocol json -d /Users/iliashebanov/Documents/WebJava/workspace/testi_Sele_testNG/test-output /var/folders/87/zdblb6_n7kn6s977jzw3xsv40000gn/T/testng-eclipse-1901468435/testng-customsuite.xml
