@@ -1672,3 +1672,6 @@ org.eclipse.core.internal.resources.ResourceException: The project description f
 
 !ENTRY org.eclipse.core.resources 4 567 2017-04-27 19:29:16.193
 !MESSAGE The project description file (.project) for 'testi_Sele_testNG' is missing.  This file contains important information about the project.  The project will not function properly until this file is restored.
+
+!ENTRY org.eclipse.core.resources 2 10035 2017-04-27 19:40:23.874
+!MESSAGE The workspace will exit with unsaved changes in this session.

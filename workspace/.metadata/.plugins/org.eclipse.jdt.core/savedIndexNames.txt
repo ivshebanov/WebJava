@@ -20,7 +20,6 @@ INDEX VERSION 1.130+/Users/iliashebanov/Documents/WebJava/workspace/.metadata/.p
 3363208041.index
 2117113611.index
 156905802.index
-3154150008.index
 483791426.index
 576073405.index
 2465022724.index
@@ -32,4 +31,3 @@ INDEX VERSION 1.130+/Users/iliashebanov/Documents/WebJava/workspace/.metadata/.p
 527849843.index
 2763200912.index
 2545238116.index
-4159638772.index
