@@ -11,8 +11,8 @@ public class NewTest_01 {
     private WebDriver driver;
 //    private HtmlUnitDriver driver;
     private String site = "http://www.mail.ru";
-    private String username = "klacuk070@mail.ru";
-    private String password = "Sxsblpwiwnbbhlyucrk3";
+    private String username = "";
+    private String password = ;
 
     @BeforeMethod
     public void setUp() throws Exception {

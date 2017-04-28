@@ -28,8 +28,8 @@ public class RegistrationPageTestProstoi {
     private WebDriver driver;
     private WebDriverWait wait;
     private String site = "http://www.mail.ru";
-    private String email = "klacuk070@mail.ru";
-    private String password = "Sxsblpwiwnbbhlyucrk3";
+    private String email = "";
+    private String password = "";
 
     @Test
     public void registrationPage() throws Exception {

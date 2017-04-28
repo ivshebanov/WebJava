@@ -52,8 +52,8 @@ public class NewTest {
 
 	@Test
 	public void main() throws InterruptedException {
-		String userlogin = "klacuk070@mail.ru";
-		String usrePassword = "Sxsblpwiwnbbhlyucrk3";
+		String userlogin = "@mail.ru";
+		String usrePassword = "";
 		try {
 			driver.get("http://www.mail.ru");
 		} catch (TimeoutException ignore) {
