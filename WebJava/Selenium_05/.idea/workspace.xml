@@ -27,8 +27,20 @@
       <file leaf-file-name="TestAutoQALogin.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/test/TestAutoQALogin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="14" column="34" lean-forward="false" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+            <state relative-caret-position="398">
+              <caret line="43" column="62" lean-forward="false" selection-start-line="43" selection-start-column="49" selection-end-line="43" selection-end-column="62" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AutoSending.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/pages/AutoSending.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="870">
+              <caret line="58" column="5" lean-forward="true" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -39,38 +51,10 @@
       <file leaf-file-name="AutoQALogin.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/pages/AutoQALogin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="13" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+            <state relative-caret-position="473">
+              <caret line="38" column="29" lean-forward="false" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#313#314#0" expanded="true" />
-                <element signature="e#349#350#0" expanded="true" />
-                <element signature="e#401#402#0" expanded="true" />
-                <element signature="e#467#468#0" expanded="true" />
-                <element signature="e#519#520#0" expanded="true" />
-                <element signature="e#585#586#0" expanded="true" />
-                <element signature="e#618#619#0" expanded="true" />
-                <element signature="e#667#668#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AutoLoginInstagram.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/pages/AutoLoginInstagram.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#446#447#0" expanded="true" />
-                <element signature="e#482#483#0" expanded="true" />
-                <element signature="e#534#535#0" expanded="true" />
-                <element signature="e#600#601#0" expanded="true" />
-                <element signature="e#652#653#0" expanded="true" />
-                <element signature="e#718#719#0" expanded="true" />
-                <element signature="e#751#752#0" expanded="true" />
-                <element signature="e#800#801#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -94,9 +78,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/pages/AutoQALogin.java" />
         <option value="$PROJECT_DIR$/src/test/java/pages/AutoLoginInstagram.java" />
+        <option value="$PROJECT_DIR$/src/test/java/pages/AutoQALogin.java" />
         <option value="$PROJECT_DIR$/src/test/java/test/TestAutoQALogin.java" />
+        <option value="$PROJECT_DIR$/src/test/java/pages/AutoSending.java" />
       </list>
     </option>
   </component>
@@ -730,41 +715,44 @@
       <option name="presentableId" value="Default" />
       <updated>1493312989144</updated>
       <workItem from="1493312992064" duration="1180000" />
-      <workItem from="1493397116520" duration="3077000" />
+      <workItem from="1493397116520" duration="14776000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestAutoQALogin - 2017.04.28 at 19h 38m 13s.xml">
+    <history-entry file="TestAutoQALogin - 2017.04.29 at 00h 40m 14s.xml">
       <configuration name="TestAutoQALogin" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="TestAutoQALogin - 2017.04.28 at 19h 39m 03s.xml">
+    <history-entry file="TestAutoQALogin - 2017.04.29 at 00h 41m 14s.xml">
       <configuration name="TestAutoQALogin" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="TestAutoQALogin - 2017.04.28 at 19h 39m 53s.xml">
+    <history-entry file="TestAutoQALogin - 2017.04.29 at 00h 42m 05s.xml">
       <configuration name="TestAutoQALogin" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="TestAutoQALogin - 2017.04.28 at 19h 40m 54s.xml">
+    <history-entry file="TestAutoQALogin - 2017.04.29 at 00h 44m 39s.xml">
       <configuration name="TestAutoQALogin" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="TestAutoQALogin - 2017.04.28 at 19h 42m 12s.xml">
+    <history-entry file="TestAutoQALogin - 2017.04.29 at 00h 48m 28s.xml">
       <configuration name="TestAutoQALogin" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="TestAutoQALogin - 2017.04.28 at 19h 42m 37s.xml">
+    <history-entry file="TestAutoQALogin - 2017.04.29 at 00h 50m 49s.xml">
       <configuration name="TestAutoQALogin" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="TestAutoQALogin - 2017.04.28 at 19h 43m 45s.xml">
+    <history-entry file="TestAutoQALogin - 2017.04.29 at 00h 52m 43s.xml">
       <configuration name="TestAutoQALogin" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="TestAutoQALogin - 2017.04.28 at 19h 45m 32s.xml">
+    <history-entry file="TestAutoQALogin - 2017.04.29 at 00h 54m 22s.xml">
       <configuration name="TestAutoQALogin" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="TestAutoQALogin - 2017.04.28 at 20h 17m 21s.xml">
+    <history-entry file="TestAutoQALogin - 2017.04.29 at 00h 56m 17s.xml">
+      <configuration name="TestAutoQALogin" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="TestAutoQALogin - 2017.04.29 at 00h 58m 44s.xml">
       <configuration name="TestAutoQALogin" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4257000" />
+    <option name="totallyTimeSpent" value="15956000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -780,7 +768,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -833,48 +821,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/test/TestAutoQALogin.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/pages/AutoLoginInstagram.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="14" column="34" lean-forward="false" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+        <state relative-caret-position="255">
+          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-api/3.4.0/selenium-api-3.4.0.jar!/org/openqa/selenium/Keys.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="112" column="30" lean-forward="false" selection-start-line="112" selection-start-column="25" selection-end-line="112" selection-end-column="30" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#2467#2468#0" expanded="true" />
+            <element signature="e#2527#2528#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/pages/AutoQALogin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+        <state relative-caret-position="473">
+          <caret line="38" column="29" lean-forward="false" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#313#314#0" expanded="true" />
-            <element signature="e#349#350#0" expanded="true" />
-            <element signature="e#401#402#0" expanded="true" />
-            <element signature="e#467#468#0" expanded="true" />
-            <element signature="e#519#520#0" expanded="true" />
-            <element signature="e#585#586#0" expanded="true" />
-            <element signature="e#618#619#0" expanded="true" />
-            <element signature="e#667#668#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pages/AutoLoginInstagram.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/test/TestAutoQALogin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+        <state relative-caret-position="398">
+          <caret line="43" column="62" lean-forward="false" selection-start-line="43" selection-start-column="49" selection-end-line="43" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#446#447#0" expanded="true" />
-            <element signature="e#482#483#0" expanded="true" />
-            <element signature="e#534#535#0" expanded="true" />
-            <element signature="e#600#601#0" expanded="true" />
-            <element signature="e#652#653#0" expanded="true" />
-            <element signature="e#718#719#0" expanded="true" />
-            <element signature="e#751#752#0" expanded="true" />
-            <element signature="e#800#801#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pages/AutoSending.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="870">
+          <caret line="58" column="5" lean-forward="true" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
