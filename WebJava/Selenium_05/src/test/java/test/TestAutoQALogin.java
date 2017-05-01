@@ -3,10 +3,7 @@ package test;
 import DAO.DaoMyClientServet;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import pages.AutoQALogin;
 import pages.AutoSending;
 
@@ -22,21 +19,23 @@ public class TestAutoQALogin {
     private String userName = "bkmz1951@mail.ru";
     private String pasword = "12345qwerty";
 
-    private String recipientEmail = "";
+    private String recipientEmail;
     private String letterSubject = "TT";
 
-    private static ArrayList<String> initList(){
+    private static ArrayList<String> initList() {
         DaoMyClientServet daoMyClientServet = new DaoMyClientServet();
         return (ArrayList<String>) daoMyClientServet.getUsersEmail();
     }
 
     @BeforeTest
     private void setupGecko() {
-        new TestAutoQALogin();
         System.setProperty("webdriver.gecko.driver", "/usr/local/Cellar/geckodriver/0.16.0/bin/geckodriver");
-        email=initList();
-        System.out.println(email);
-        System.out.println(email.size());
+        email = initList();
+    }
+
+    @AfterTest
+    public void tearDown2() throws Exception {
+
     }
 
     @BeforeMethod
@@ -50,15 +49,14 @@ public class TestAutoQALogin {
 
     @AfterMethod
     public void tearDown() throws Exception {
-        driver.quit();
         email.remove(0);
+        driver.quit();
     }
 
-    @Test(invocationCount = 10)
-    public void test_Home_Page_Appear_Correct() throws InterruptedException {
+    @Test(invocationCount = 3)
+    public void test_01() throws InterruptedException {
         objLogin = new AutoQALogin(driver);
         objLogin.loginToAutoQA(userName, pasword);
-
         objSending = new AutoSending(driver);
         objSending.loginToAutoQA(recipientEmail, letterSubject);
     }
