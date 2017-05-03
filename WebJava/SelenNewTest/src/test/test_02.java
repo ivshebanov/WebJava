@@ -32,8 +32,8 @@ public class test_02 {
 
     @Test
     public void gotoSeleniumWikiPage() throws InterruptedException {
-        String userlogin = "klacuk070@mail.ru";
-        String usrePassword = "Sxsblpwiwnbbhlyucrk3";
+        String userlogin = "@mail.ru";
+        String usrePassword = "";
         try {
             driver.get("http://www.mail.ru");
         } catch (TimeoutException ignore) {

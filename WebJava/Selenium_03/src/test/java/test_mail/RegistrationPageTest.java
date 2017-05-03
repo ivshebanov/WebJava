@@ -12,8 +12,8 @@ import java.util.concurrent.TimeUnit;
 public class RegistrationPageTest {
     private WebDriver driver;
     private final String site = "http://www.mail.ru";
-    private final String email = "klacuk070@mail.ru";
-    private final String password = "Sxsblpwiwnbbhlyucrk3";
+    private final String email = "@mail.ru";
+    private final String password = "";
 
     private final RegistrationHelper rh = new RegistrationHelper(new RegistrationPage(), driver);
 

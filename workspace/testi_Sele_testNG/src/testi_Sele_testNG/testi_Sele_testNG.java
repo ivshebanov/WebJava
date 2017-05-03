@@ -21,8 +21,8 @@ public class testi_Sele_testNG {
 	
 	@Test
 	public void main() throws InterruptedException {
-		String userlogin = "klacuk070@mail.ru";
-		String usrePassword = "Sxsblpwiwnbbhlyucrk3";
+		String userlogin = "@mail.ru";
+		String usrePassword = "";
 		driver.get("http://www.mail.ru");
 		driver.findElement(By.id("mailbox__login")).clear();
 		driver.findElement(By.id("mailbox__login")).sendKeys(userlogin);

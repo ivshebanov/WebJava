@@ -2,7 +2,6 @@ package test;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -18,12 +17,12 @@ import java.util.concurrent.TimeUnit;
 public class TestAutoQALogin {
     WebDriver driver;
     AutoQALogin objLogin;
-    private String strUserName = "klacuk070@mail.ru";
-    private String strPasword = "Sxsblpwiwnbbhlyucrk3";
+    private String strUserName = "@mail.ru";
+    private String strPasword = "";
 
     @BeforeTest
     public void setup() {
-        System.setProperty("webdriver.gecko.driver", "D:\\Hotj\\WebJava\\drivers\\geckodriver.exe");
+        System.setProperty("webdriver.gecko.driver", "/usr/local/Cellar/geckodriver/0.16.0/bin/geckodriver");
         driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.get("https://mail.ru/");
