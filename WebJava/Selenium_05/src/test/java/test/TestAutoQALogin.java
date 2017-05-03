@@ -6,7 +6,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.*;
 import pages.AutoQALogin;
 import pages.AutoSending;
-
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
@@ -61,3 +60,4 @@ public class TestAutoQALogin {
         objSending.loginToAutoQA(recipientEmail, letterSubject);
     }
 }
+
