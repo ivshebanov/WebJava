@@ -41,13 +41,14 @@ public class Servlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         sendPage1(response);
     }
+
     private void sendPage1(HttpServletResponse response) throws ServletException, IOException {
 //        response.setContentType("text/html");
 //        response.setCharacterEncoding("UTF-8");
         response.setContentType("text/html;charset=UTF-8");
         System.out.println(response.getCharacterEncoding());
 
-        try (PrintWriter out = response.getWriter()){
+        try (PrintWriter out = response.getWriter()) {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
@@ -90,7 +91,7 @@ public class Servlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         System.out.println(response.getCharacterEncoding());
 
-        try (PrintWriter out = response.getWriter()){
+        try (PrintWriter out = response.getWriter()) {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
@@ -135,7 +136,7 @@ public class Servlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         System.out.println(response.getCharacterEncoding());
 
-        try (PrintWriter out = response.getWriter()){
+        try (PrintWriter out = response.getWriter()) {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");

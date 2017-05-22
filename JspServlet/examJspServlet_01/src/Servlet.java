@@ -22,7 +22,7 @@ public class Servlet extends HttpServlet {
 //        response.setCharacterEncoding("UTF-8");
 //        request.setCharacterEncoding("UTF-8");
         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()){
+        try (PrintWriter out = response.getWriter()) {
             out.println("<html>");
             out.println("<head>");
             out.println("<meta charset=\"UTF-8\" />");
