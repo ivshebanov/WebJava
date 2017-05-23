@@ -8,9 +8,10 @@ public class Main {
             System.out.print(array[i] + ", ");
         }
         int sum = 0;
-        for (int anArray : array) {
-            sum += anArray;
+        for (int i = 0; i < array.length; i++) {
+            sum = sum + array[i];
         }
+        for (int anArray : array) sum += anArray;
         System.out.println();
         System.out.println(sum);
     }
