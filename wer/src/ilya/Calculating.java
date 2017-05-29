@@ -17,10 +17,10 @@ public class Calculating {
     private int maxCountPopulation = 200;//максимальное колличество популяций
     private int typeCross = 0;//тип скрещивания 0, 1, 2
     private int countIndivid; //колличество особей в популяции
-    private int[][] graph;
+    private int[][] tabl;
     private int countArc = 1;
-    private int indexStart = 1;
-    private int indexEnd;
+    private int startIndex = 1;
+    private int endIndex;
     private int numberPopulation = 0;
     private Chromos mainChromo;
     private List<Chromos> population = new ArrayList();
@@ -36,17 +36,16 @@ public class Calculating {
         try {
             BufferedReader fileReader = new BufferedReader(new FileReader(new File("tabl")));
             ArrayList listStr = new ArrayList();
-
             while (true) {
                 String temp = fileReader.readLine();
                 if (temp == null || temp.equals("")) {
                     this.countIndivid = this.countArc + 1;
-                    this.indexEnd = this.countArc;
+                    this.endIndex = this.countArc;
                     if (this.countArc < 3) {
                         System.out.println("Введена неверная таблица");
                         System.exit(0);
                     }
-                    this.graph = new int[this.countArc][this.countArc];
+                    this.tabl = new int[this.countArc][this.countArc];
                     int j = 0;
                     int countSplit = 0;
                     for (Object aListStr : listStr) {
@@ -68,8 +67,8 @@ public class Calculating {
                                 graphInt = 10000;
                             }
 
-                            this.graph[j][i] = graphInt;
-                            this.graph[i][j] = graphInt;
+                            this.tabl[j][i] = graphInt;
+                            this.tabl[i][j] = graphInt;
                         }
                     }
                     break;
@@ -80,8 +79,8 @@ public class Calculating {
         } catch (IOException var16) {
             var16.printStackTrace();
         }
-        this.indexStart = start;
-        this.indexEnd = end;
+        this.startIndex = start;
+        this.endIndex = end;
         this.createPopulation();
         System.out.println("Шебанов Илья Владимирович, ivshebanov@gmail.com, 2017 год");
         System.out.println("---------------------------------------------------------");
@@ -91,8 +90,8 @@ public class Calculating {
 
     private void printTabl() {
         StringBuilder strB = new StringBuilder();
-        for (int[] aGraph : this.graph) {
-            for (int j = 0; j < this.graph.length; ++j) {
+        for (int[] aGraph : this.tabl) {
+            for (int j = 0; j < this.tabl.length; ++j) {
                 strB.append(aGraph[j]).append("\t");
             }
             strB.append("\n");
@@ -102,7 +101,7 @@ public class Calculating {
 
     private void createPopulation() {
         while (this.population.size() != this.countIndivid) {
-            this.mainChromo = new Chromos(this.indexStart, this.indexEnd, this.countArc);
+            this.mainChromo = new Chromos(this.startIndex, this.endIndex, this.countArc);
             this.population.add(this.mainChromo);
         }
         this.clearRepeate(this.population);
@@ -199,7 +198,7 @@ public class Calculating {
         int sum = 0;
         Integer[] arrayGens = chromos.getGens();
         for (int i = 0; i < arrayGens.length - 1; ++i) {
-            sum += this.graph[arrayGens[i] - 1][arrayGens[i + 1] - 1];
+            sum += this.tabl[arrayGens[i] - 1][arrayGens[i + 1] - 1];
         }
         return sum;
     }
@@ -303,9 +302,9 @@ public class Calculating {
                                         c1[k] = buff2[k];
                                     }
                                 }
-                                this.mainChromo = new Chromos(this.indexStart, this.indexEnd, c1);
+                                this.mainChromo = new Chromos(this.startIndex, this.endIndex, c1);
                                 this.childPopulation.add(this.mainChromo);
-                                this.mainChromo = new Chromos(this.indexStart, this.indexEnd, c2);
+                                this.mainChromo = new Chromos(this.startIndex, this.endIndex, c2);
                                 this.childPopulation.add(this.mainChromo);
                                 break;
                             }
@@ -348,7 +347,7 @@ public class Calculating {
         this.population.clear();
         this.population.addAll(this.newPopulation);
         while (this.population.size() < this.countIndivid) {
-            this.population.add(new Chromos(this.indexStart, this.indexEnd, (Integer[]) this.mainChromo.randomGens().clone()));
+            this.population.add(new Chromos(this.startIndex, this.endIndex, (Integer[]) this.mainChromo.randomGens().clone()));
         }
         this.mutation(this.population);
         this.clearRepeate(this.population);
