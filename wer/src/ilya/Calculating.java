@@ -1,5 +1,6 @@
 package ilya;
 /*Шебанов Илья Владимирович, ivshebanov@gmail.com, 2017 год*/
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -7,20 +8,19 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Calculating {
-    private double chanceMutation = 0.3D;
+    private double chanceMutation = 0.2D;//вероятность мутации
+    private int maxCountPopulation = 200;//максимальное колличество популяций
+    private int typeCross = 0;//тип скрещивания 0, 1, 2
+    private int countIndivid; //колличество особей в популяции
     private int[][] graph;
     private int countArc = 1;
-    private int countIndivid;
     private int indexStart = 1;
     private int indexEnd;
-    private int typeCross = 0;
-    private int maxCountPopulation = 100;
     private int numberPopulation = 0;
     private Chromos mainChromo;
     private List<Chromos> population = new ArrayList();
@@ -28,11 +28,11 @@ public class Calculating {
     private List<Chromos> childPopulation = new ArrayList();
     private List<Chromos> newPopulation = new ArrayList();
 
-    public Calculating() {
-        this(1,5);
+    Calculating() {
+        this(1, 5);
     }
 
-    public Calculating(int start, int end) {
+    Calculating(int start, int end) {
         try {
             BufferedReader fileReader = new BufferedReader(new FileReader(new File("tabl")));
             ArrayList listStr = new ArrayList();
@@ -46,14 +46,11 @@ public class Calculating {
                         System.out.println("Введена неверная таблица");
                         System.exit(0);
                     }
-
                     this.graph = new int[this.countArc][this.countArc];
                     int j = 0;
                     int countSplit = 0;
-                    Iterator var9 = listStr.iterator();
-
-                    while (var9.hasNext()) {
-                        String s = (String) var9.next();
+                    for (Object aListStr : listStr) {
+                        String s = (String) aListStr;
                         ++j;
                         String[] splitStr = s.split(" ");
                         int var10000 = splitStr.length;
@@ -62,15 +59,13 @@ public class Calculating {
                             System.out.println("Введена неверная таблица");
                             System.exit(0);
                         }
-
                         for (int i = 0; i < splitStr.length; ++i) {
                             String str = splitStr[i];
-
                             int graphInt;
                             try {
                                 graphInt = Integer.parseInt(str);
                             } catch (NumberFormatException var15) {
-                                graphInt = 32767;
+                                graphInt = 10000;
                             }
 
                             this.graph[j][i] = graphInt;
@@ -79,54 +74,26 @@ public class Calculating {
                     }
                     break;
                 }
-
                 ++this.countArc;
                 listStr.add(temp);
             }
         } catch (IOException var16) {
-            ;
+            var16.printStackTrace();
         }
-
         this.indexStart = start;
         this.indexEnd = end;
         this.createPopulation();
+        System.out.println("Шебанов Илья Владимирович, ivshebanov@gmail.com, 2017 год");
+        System.out.println("---------------------------------------------------------");
+        printTabl();
+        System.out.println("---------------------------------------------------------");
     }
 
-    public void setCountPopulation(int count) {
-        this.maxCountPopulation = count;
-    }
-
-    public void setTypeCross(int i) {
-        this.typeCross = i;
-    }
-
-    public void setCountIndivid(int i) {
-        this.countIndivid = i;
-    }
-
-    public void setChanceMutation(double d) {
-        if (d >= 0.0D && d <= 1.0D) {
-            this.chanceMutation = d;
-        } else {
-            this.setChanceMutation(ThreadLocalRandom.current().nextDouble());
-        }
-
-    }
-
-    public void setChanceMutation(int i) {
-        if (i >= 0 && i <= 100) {
-            this.chanceMutation = (double) i / 100.0D;
-        } else {
-            this.setChanceMutation(ThreadLocalRandom.current().nextInt(101));
-        }
-
-    }
-
-    public void printTabl() {
+    private void printTabl() {
         StringBuilder strB = new StringBuilder();
-        for (int i = 0; i < this.graph.length; ++i) {
+        for (int[] aGraph : this.graph) {
             for (int j = 0; j < this.graph.length; ++j) {
-                strB.append(this.graph[i][j]).append("\t");
+                strB.append(aGraph[j]).append("\t");
             }
             strB.append("\n");
         }
@@ -159,9 +126,9 @@ public class Calculating {
                         var10000 = System.out;
                         var10002 = new Object[3];
                         ++i;
-                        var10002[0] = Integer.valueOf(i);
+                        var10002[0] = i;
                         var10002[1] = chromos.getStrChromosome();
-                        var10002[2] = Integer.valueOf(this.fitnessFunction(chromos));
+                        var10002[2] = this.fitnessFunction(chromos);
                         var10000.printf("H%d: %s Вес --> %d%n", var10002);
                     }
                     return;
@@ -173,18 +140,16 @@ public class Calculating {
                 i = 0;
                 if (this.selectedPopulation.size() != 0) {
                     var3 = this.selectedPopulation.iterator();
-
                     while (var3.hasNext()) {
                         chromos = (Chromos) var3.next();
                         var10000 = System.out;
                         var10002 = new Object[3];
                         ++i;
-                        var10002[0] = Integer.valueOf(i);
+                        var10002[0] = i;
                         var10002[1] = chromos.getStrChromosome();
-                        var10002[2] = Integer.valueOf(this.fitnessFunction(chromos));
+                        var10002[2] = this.fitnessFunction(chromos);
 //                        var10000.printf("H%d: %s Вес --> %d%n", var10002);
                     }
-
                     return;
                 } else {
                     System.out.println("Пустая популяция");
@@ -194,18 +159,16 @@ public class Calculating {
                 i = 0;
                 if (this.childPopulation.size() != 0) {
                     var3 = this.childPopulation.iterator();
-
                     while (var3.hasNext()) {
                         chromos = (Chromos) var3.next();
                         var10000 = System.out;
                         var10002 = new Object[3];
                         ++i;
-                        var10002[0] = Integer.valueOf(i);
+                        var10002[0] = i;
                         var10002[1] = chromos.getStrChromosome();
-                        var10002[2] = Integer.valueOf(this.fitnessFunction(chromos));
+                        var10002[2] = this.fitnessFunction(chromos);
                         var10000.printf("H%d: %s Вес --> %d%n", var10002);
                     }
-
                     return;
                 } else {
                     System.out.println("Пустая популяция");
@@ -221,23 +184,22 @@ public class Calculating {
                         var10000 = System.out;
                         var10002 = new Object[3];
                         ++i;
-                        var10002[0] = Integer.valueOf(i);
+                        var10002[0] = i;
                         var10002[1] = chromos.getStrChromosome();
-                        var10002[2] = Integer.valueOf(this.fitnessFunction(chromos));
+                        var10002[2] = this.fitnessFunction(chromos);
                         var10000.printf("H%d: %s Вес --> %d%n", var10002);
                     }
                 } else {
                     System.out.println("Пустая популяция");
                 }
         }
-
     }
 
     private int fitnessFunction(Chromos chromos) {
         int sum = 0;
         Integer[] arrayGens = chromos.getGens();
         for (int i = 0; i < arrayGens.length - 1; ++i) {
-            sum += this.graph[arrayGens[i].intValue() - 1][arrayGens[i + 1].intValue() - 1];
+            sum += this.graph[arrayGens[i] - 1][arrayGens[i + 1] - 1];
         }
         return sum;
     }
@@ -247,17 +209,13 @@ public class Calculating {
         this.selectedPopulation.clear();
         this.selectedPopulation.addAll(this.population);
         int count2 = 0;
-        Iterator var3 = this.population.iterator();
-
-        while (var3.hasNext()) {
-            Chromos m = (Chromos) var3.next();
+        for (Object m : this.population) {
             if (count2 < count) {
                 ++count2;
             } else {
                 this.selectedPopulation.remove(m);
             }
         }
-
         this.clearRepeate(this.selectedPopulation);
         this.sort(this.selectedPopulation);
         this.getStrAllPopulation(1);
@@ -285,19 +243,17 @@ public class Calculating {
             int first;
             while (j < i) {
                 first = ThreadLocalRandom.current().nextInt(this.countArc - 1);
-                if (!listPoint.contains(Integer.valueOf(first))) {
-                    listPoint.add(Integer.valueOf(first));
+                if (!listPoint.contains(first)) {
+                    listPoint.add(first);
                     ++j;
                 }
             }
-            listPoint.add(Integer.valueOf(this.countArc - 1));
+            listPoint.add(this.countArc - 1);
             Collections.sort(listPoint);
-            System.out.print("Точки скрещивания: ");
-            Iterator var19 = listPoint.iterator();
+            System.out.print("Точки скрещивания  --> ");
 
-            while (var19.hasNext()) {
-                Integer integ = (Integer) var19.next();
-                if (integ.intValue() != this.countArc - 1) {
+            for (Object integ : listPoint) {
+                if ((Integer) integ != this.countArc - 1) {
                     System.out.print(integ + " ");
                 }
             }
@@ -317,8 +273,8 @@ public class Calculating {
                         if (first == 1) {
                             ++first;
                         } else {
-                            Integer[] c1 = (Integer[]) chromos1.getGens().clone();
-                            Integer[] c2 = (Integer[]) chromos2.getGens().clone();
+                            Integer[] c1 = chromos1.getGens().clone();
+                            Integer[] c2 = chromos2.getGens().clone();
                             Integer[] buff1 = new Integer[this.countArc];
                             Integer[] buff2 = new Integer[this.countArc];
                             int countEven = 1;
@@ -326,7 +282,7 @@ public class Calculating {
                             Iterator var16 = listPoint.iterator();
                             while (true) {
                                 while (var16.hasNext()) {
-                                    int intPoint = ((Integer) var16.next()).intValue();
+                                    int intPoint = (Integer) var16.next();
                                     int startIndex = endIndex + 1;
                                     endIndex = intPoint;
                                     if (countEven % 2 != 0) {
@@ -403,33 +359,35 @@ public class Calculating {
     }
 
     private void sort(List<Chromos> listChrom) {
-        Collections.sort(listChrom, new Comparator<Chromos>() {
-            public int compare(Chromos o1, Chromos o2) {
-                int chro1 = Calculating.this.fitnessFunction(o1);
-                int chro2 = Calculating.this.fitnessFunction(o2);
-                return chro1 - chro2;
-            }
+        listChrom.sort((o1, o2) -> {
+            int chro1 = Calculating.this.fitnessFunction(o1);
+            int chro2 = Calculating.this.fitnessFunction(o2);
+            return chro1 - chro2;
         });
     }
 
     private void mutation(List<Chromos> listChrom) {
-        for (int i = 0; i < listChrom.size(); ++i) {
+        for (Chromos aListChrom : listChrom) {
             if (ThreadLocalRandom.current().nextDouble() <= this.chanceMutation) {
-                Integer[] copyGens = ((Chromos) listChrom.get(i)).getGens();
+                Integer[] copyGens = aListChrom.getGens();
                 boolean checkMutation = false;
                 while (!checkMutation) {
                     int mutationGen = ThreadLocalRandom.current().nextInt(1, this.countArc + 1);
                     int temp2 = ThreadLocalRandom.current().nextInt(1, this.countArc - 1);
-                    if (copyGens[temp2].intValue() == mutationGen) {
+                    if (copyGens[temp2] == mutationGen) {
                         checkMutation = false;
                     } else {
-                        copyGens[temp2] = Integer.valueOf(mutationGen);
+                        copyGens[temp2] = mutationGen;
                         checkMutation = true;
                     }
                 }
             }
         }
 
+    }
+
+    public void setCountIndivid(int i) {
+        this.countIndivid = i;
     }
 
     public void start(int countCicle) {
@@ -444,7 +402,7 @@ public class Calculating {
             this.selection();
             this.crossing();
             this.reduction();
-            System.out.println("Наилучшая особь в поколении №" + this.numberPopulation + ": " + ((Chromos) this.population.get(0)).getStrChromosome() + ". Имеет вес: " + this.fitnessFunction((Chromos) this.population.get(0)));
+            System.out.println("Наилучшая особь в поколении №" + this.numberPopulation + ": " + this.population.get(0).getStrChromosome() + ". Вес --> " + this.fitnessFunction(this.population.get(0)));
         }
     }
 }
