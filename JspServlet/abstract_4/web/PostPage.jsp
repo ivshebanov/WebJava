@@ -16,5 +16,16 @@
     String lastName = request.getParameter("lastName");
     out.println("Ваше имя: " + firstName + " " + lastName);
 %>
+
+<%
+    String[] values = request.getParameterValues("favoriteMusic");
+    if(values!=null) {
+        out.println("Вы выбрали: ");
+        for (String value : values) {
+            out.println("<br/>" + value);
+        }
+    }
+%>
+
 </body>
 </html>
