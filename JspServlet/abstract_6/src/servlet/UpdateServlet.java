@@ -9,9 +9,6 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.*;
 
-/**
- * Created by iliashebanov on 05.07.17.
- */
 @WebServlet(name = "UpdateServlet")
 public class UpdateServlet extends HttpServlet {
     private String dbURL = "jdbc:postgresql://localhost:5432/northwind";
